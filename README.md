@@ -19,7 +19,8 @@ Este projeto automatiza o envio de e-mails de boas-vindas para novos clientes ca
 
 ## 📂 Estrutura da Tabela `Clientesn8n`
 
-sql
+
+<pre><code class="sql">
 CREATE TABLE Clientesn8n (
   Id INT IDENTITY(1,1) PRIMARY KEY,
   Nome NVARCHAR(200) NOT NULL,
@@ -27,7 +28,8 @@ CREATE TABLE Clientesn8n (
   DataRegistro DATETIME DEFAULT GETDATE(),
   EnviadoEmail BIT DEFAULT 0,
   rowverssion TIMESTAMP
-); 
+);
+</code></pre>
 
 
 🔁 Funcionamento do Workflow no n8n
