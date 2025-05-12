@@ -71,3 +71,8 @@ O envio de e-mails foi testado com a ferramenta Mailtrap, que simula a entrega r
 
 🔗 Mensagem de teste disponível em:
 https://mailtrap.io/inboxes/3691548/messages/4875964889
+
+🖼️ Imagem do Workflow no n8n
+
+![image](https://github.com/user-attachments/assets/03db1a4f-0da1-4d99-ad02-1256d17770dd)
+
