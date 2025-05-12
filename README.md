@@ -28,3 +28,46 @@ CREATE TABLE Clientesn8n (
   EnviadoEmail BIT DEFAULT 0,
   rowverssion TIMESTAMP
 );
+
+
+🔁 Funcionamento do Workflow no n8n
+Etapas do processo:
+⏰ Schedule Trigger
+
+Executa a cada 10 segundos para verificar novos registros.
+
+🗃️ Consulta SQL
+
+Seleciona clientes com EnviadoEmail = 0 ou NULL.
+
+🔎 Condição (If)
+
+Verifica se existem registros a serem processados.
+
+📧 Envio de E-mail
+
+Dispara um e-mail HTML personalizado para cada cliente.
+
+✅ Atualização no Banco
+
+Atualiza o campo EnviadoEmail para 1, evitando reenvios.
+
+💌 Exemplo de E-mail Enviado
+html
+Copy
+Edit
+<html>
+  <body>
+    <h2>Olá, {{ $json.Nome }}!</h2>
+    <p>Seja bem-vindo à nossa plataforma.</p>
+    <p>Estamos felizes em ter você conosco.</p>
+    <p>Se precisar de ajuda, é só responder este e-mail.</p>
+    <br>
+    <p>Atenciosamente,<br>Sua equipe.</p>
+  </body>
+</html>
+🧪 Ambiente de Teste com Mailtrap
+O envio de e-mails foi testado com a ferramenta Mailtrap, que simula a entrega real de e-mails em ambiente seguro para desenvolvimento.
+
+🔗 Mensagem de teste disponível em:
+https://mailtrap.io/inboxes/3691548/messages/4875964889
